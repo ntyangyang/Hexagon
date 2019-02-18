@@ -4,6 +4,7 @@ import com.google.inject.Inject;
 import com.hexagon.core.domain.User;
 import com.hexagon.core.exception.UserNotFoundException;
 import com.hexagon.core.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -17,6 +18,7 @@ import java.util.Optional;
 @Component
 public class DefaultUserServiceImpl implements UserService {
 
+    @Autowired
     private UserRepository repo;
 
     @Inject
